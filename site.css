@@ -1,0 +1,52 @@
+#container {
+	margin-top: 50px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+h1 {
+	background-color: #0066CC;
+	color: white;
+	font-size: 50px;
+	padding: 10px;
+	border-style: solid;
+	border: 1px
+}
+h2 {
+	background-color: #0066CC;
+	color: white;
+	font-size: 35px;
+	padding: 10px;
+	border-style: solid;
+	border: 1px
+}
+h3 {
+	background-color: #0066CC;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	border-style: solid;
+	border: 1px
+}
+h4 {
+	background-color: #0066CC;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	border-style: solid;
+	border: 1px
+}
+a:link {
+	color: #80B3E6;
+	text-decoration: none;
+}
+a:hover {
+	color: #BFD9F2;
+	text-decoration: none;
+}
+a:visited {
+	color: #00264C;
+	text-decoration: none;
+}
+ul {
+	font-size: 25px;
+}
