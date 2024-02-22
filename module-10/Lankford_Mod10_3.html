@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+
+  </head>
+
+  <body>
+    <br />
+    <div>
+        <img border = 0 name = "cave" src = "cave_02.jpg">
+      </a>
+	  <br />
+	  <button type="button" onclick="cave.src='cave_01.jpg';">Change Image</button>
+	  <button type="button" onclick="cave.src='cave_02.jpg';">Reset</button>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Click the Change Image button to change the image. Click reset to change it back.
+      <br />
+
+    </div>
+    <div>
+        <img border = 0 name = "moon" src = "moon_02.jpg">
+      </a>
+	  <br />
+	  <button type="button" onclick="moon.src='moon_01.jpg';">Change Image</button>
+	  <button type="button" onclick="moon.src='moon_02.jpg';">Reset</button>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Click the Change Image button to change the image. Click reset to change it back.
+      <br />
+      Right-click and select View Source for more details.
+
+    </div>
+
+  </body>
+
+</html>
