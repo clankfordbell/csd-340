@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+  <input type="text" id="toDoInput" placeholder="To Do Item">
+  <button onclick="addToDo()">Add</button>
+  <button onclick="deleteLast()">Delete</button>
+  <button onclick="displayToDos()">Display</button>
+  
+  <ul id="toDoList"></ul>
+
+  <script>
+    let toDos = [];
+
+    function addToDo() {
+      let toDoInput = document.getElementById("toDoInput");
+      let toDo = toDoInput.value;
+      if (toDo.trim() !== "") {
+        toDos.push(toDo);
+        alert(`Item '${toDo}' added at position ${toDos.length}`);
+        toDoInput.value = "";
+      }
+    }
+
+    function deleteLast() {
+      if (toDos.length > 0) {
+        let deletedToDo = toDos.pop();
+        alert(`Deleted Last Item '${deletedToDo}'`);
+      } else {
+        alert("No items to delete");
+      }
+    }
+
+    function displayToDos() {
+      let toDoList = document.getElementById("toDoList");
+      toDoList.innerHTML = "";
+      toDos.forEach((toDo, index) => {
+        let toDoItem = document.createElement("li");
+        toDoItem.textContent = `${index + 1}. ${toDo}`;
+        toDoList.appendChild(toDoItem);
+      });
+    }
+  </script>
+</body>
+</html>
