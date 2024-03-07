@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="Lankford_Mod12_2.css" type="text/css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div id=container>
+        <h1 style="text-align: center;">Assignment 12.2: JavaScript - Part 4</h1>
+
+        <div style="display: flex; justify-content: space-between; width: 45%;">
+            <div>
+                <h3 style="font-weight: 500;">Top 10 Favorite Books</h3>
+                <ol id="bookList" type="1" style="border: 1px solid red; border-radius: 15px; padding: 10px; list-style-position: inside;">
+                    <li>Recusion by Blake Crouch</li>
+                    <li>Dark Matter by Blake Crouch</li>
+                    <li>One For The Money by Janet Evanovich</li>
+                    <li>The Perks of Being a Wallflower by Stephen Chbosky</li>
+                    <li>The Guest List by Lucy Foley</li>
+                    <li>The New Rules of High School by Blake Nelson</li>
+                    <li>Harry Potter and The Prisoner of Azkaban</li>
+                    <li>Kitty and The Midnigh Hour by Carrie Vaughn</li>
+                    <li>The Giver by Lois Lowry</li>
+                    <li>The Hunger Games by Suzanne Collins</li>
+                </ol>
+            </div>
+
+
+            <div>
+                <h3 style="font-weight: 500;">5 Things I’ve Learned Since the Course Started</h3>
+                <ul style="border: 1px dashed red; border-radius: 15px; padding: 10px; list-style: upper-roman; list-style-position: inside">
+                    <li>GitHub will host a website on your repository.</li>
+                    <li>It's easy to forget a tag pairing in HTML, create both tags prior to adding content.</li>
+                    <li>CSS properities can be stored within your HTML code or externally in a CSS file.</li>
+                    <li>Save work often, otherwise no changes will be made when refreshing the browser.</li>
+                    <li>ol should be used for ordered lists, ul should be used for unordered lists</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <a href="../index.html">Back to Landing Page</a>
+        </div>
+
+        <button onclick="displayAscending()">Top to Bottom</button>
+        <button onclick="displayDescending()">Bottom to Top</button>
+    </div>
+
+    <script>
+        const bookList = [
+            "Recusion by Blake Crouch",
+            "Dark Matter by Blake Crouch",
+            "One For The Money by Janet Evanovich",
+            "The Perks of Being a Wallflower by Stephen Chbosky",
+            "The Guest List by Lucy Foley",
+            "The New Rules of High School by Blake Nelson",
+            "Harry Potter and The Prisoner of Azkaban",
+            "Kitty and The Midnigh Hour by Carrie Vaughn",
+            "The Giver by Lois Lowry",
+            "The Hunger Games by Suzanne Collins"
+        ];
+
+        function displayAscending() {
+            const ol = document.getElementById("bookList");
+            ol.innerHTML = ""; // Clear the current list
+
+            bookList.sort(); // Sort the array in ascending order
+
+            // Add the sorted items back to the list
+            bookList.forEach(function (item) {
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(item));
+                ol.appendChild(li);
+            });
+        }
+
+        function displayDescending() {
+            const ol = document.getElementById("bookList");
+            ol.innerHTML = ""; // Clear the current list
+
+            bookList.sort(); // Sort the array in ascending order
+            bookList.reverse(); // Reverse the array to get descending order
+
+            // Add the sorted items back to the list
+            bookList.forEach(function (item) {
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(item));
+                ol.appendChild(li);
+            });
+        }
+    </script>
+</body>
+
+</html>
